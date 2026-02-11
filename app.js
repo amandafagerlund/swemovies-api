@@ -18,7 +18,7 @@ db.once('open', function (callback) {
 });
 
 var app = express();
-app.use(cors());
+app.use(cors({ origin: "*" }));
 
 var indexRouter = require('./routes/index');
 var filmerRouter = require('./routes/filmer'); // Route till filmer.
