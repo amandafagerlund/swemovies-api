@@ -17,12 +17,12 @@ db.once('open', function (callback) {
   console.log("Kopplingen lyckades!");
 });
 
+var app = express();
 app.use(cors());
 
 var indexRouter = require('./routes/index');
 var filmerRouter = require('./routes/filmer'); // Route till filmer.
 
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
